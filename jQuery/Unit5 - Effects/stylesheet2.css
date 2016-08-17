@@ -1,0 +1,72 @@
+#car {
+    margin-top: 20px;
+}
+
+#top {
+    position: relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    background-color: #cc0000;
+    left: 25px;
+}
+
+#bottom {
+    position: relative;
+    height: 25px;
+    width: 100px;
+    background-color: #cc0000;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: -25px;
+}
+
+#fwheel {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: black;
+    top: -35px;
+    left: 5px;
+}
+
+#bwheel {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    background-color: black;
+    top: -55px;
+    left: 75px;
+}
+
+#resize {
+    height: 100px;
+    background-color: #ABCDEF;
+    font-family: Verdana, Arial, Sans-Serif;
+    font-size: 1em;
+    text-align: center;
+}
+
+ol {
+    list-style-type: none;
+    position: relative;
+    left: -20px;
+}
+
+ol li {
+    background: #eeeeee;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 3px;
+    padding: 0.4em;
+    font-size: 1em;
+    height: 16px;
+    font-family: Verdana, Arial, Sans-Serif;
+}
+
+ol .ui-selected {
+    background: #F39814;
+    color: white;
+}

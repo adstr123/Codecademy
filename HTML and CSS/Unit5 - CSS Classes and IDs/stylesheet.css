@@ -1,0 +1,24 @@
+h3 {
+    color: blue;
+}
+
+/* more sepcific selectors override less specific. Selectors further down the stylesheet override identical selectors further up */
+div div div h3 {
+    color: red;
+}
+
+* {
+    border: 1px dashed #3A5FCD;
+}
+
+body > h3 {
+    color: yellowgreen;
+}
+
+.para {
+    font-family: sans-serif;
+}
+
+#additional {
+    font-size: 12px;
+}

@@ -1,0 +1,41 @@
+<!-- intro to tables inc. thead, tbody, tr, th & td -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Time</title>
+    </head>
+    
+    <body>
+        
+        <table style="border-collapse:collapse;">                                                   <!-- sets whether table bodies are collapsed into a single border or detached as with default html -->
+            <thead>                                                                                 <!-- a structure used for the table heading -->
+                <tr>                                                                                <!-- a table row -->
+                    <th colspan="2" style="color: red">Famous Monsters by Birth Year</th>           <!-- a structure used for a table heading cell -->
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <th style="padding:5px;"><em>Famous Monster</em></th>
+                    <th style="padding:5px;border-left:1px solid black;"><em>Birth Year</em></th>
+                </tr>
+            </thead>
+            <tbody>                                                                                 <!-- structure used to define a table's body -->
+                <tr>
+                    <td style="padding:5px;">King Kong</td>                                         <!-- structure used for table data cell -->
+                    <td style="padding:5px;border-left:1px solid black;">1933</td>     
+                </tr>
+                
+                <tr>
+                    <td style="padding:5px;">Dracula</td>
+                    <td style="padding:5px;border-left:1px solid black;">1897</td>
+                </tr>
+                
+                <tr>
+                    <td style="padding:5px;">Bride of Frankenstein</td>
+                    <td style="padding:5px;border-left:1px solid black;">1944</td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </body>
+
+</html>

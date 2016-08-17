@@ -1,0 +1,21 @@
+a:link {
+    text-decoration: none;
+    color: #008B45;
+    display: block;
+}
+
+a:hover {
+    #00FF00;
+}
+
+a:visited {
+    color: #EE9A00;
+}
+
+a:first-child {
+    font-size: 20px;
+}
+
+a:nth-child(3) {
+    font-size: 12px;
+}

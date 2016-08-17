@@ -1,0 +1,15 @@
+td {
+    height: 50px;
+    width: 50px;
+    border: 1px dashed blue;
+}
+
+table {
+    border: 1px solid black;
+    background-color: #5672f5
+}
+
+a {
+    color: #cc0000;
+    text-decoration: none;
+}

@@ -1,0 +1,38 @@
+div {
+	border-radius: 5px;
+}
+
+#header {
+	height: 50px;
+	background-color: #F38630;
+	margin-bottom: 10px;
+    position: static;           /* positioned according to the normal flow of the page. Does not obey top/right/bottom/left rules */
+}
+
+.left {
+	height: 300px;
+	width: 150px;
+	background-color: #A7DBD8;
+	float: left;
+	margin-bottom: 10px;
+    position: absolute;         /* positioned relative to its parent (in this case body, so positioning is normal) */
+}
+
+.right {
+	height: 300px;
+	width: 450px;
+	background-color: #E0E4CC;
+	float: right;
+	margin-bottom: 10px;
+    position: relative;         /* positioned relative to its static position. Obeys top/right/bottom/left rules */
+}
+
+#footer {
+	height: 50px;
+	background-color: #69D2E7;
+    clear: both;
+}
+
+p {
+    position: fixed;            /* anchors to browser window */
+}
