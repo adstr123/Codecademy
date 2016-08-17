@@ -1,0 +1,2 @@
+# Codecademy
+Codecademy completed exercises
