@@ -1,0 +1,17 @@
+$total: 10
+$step: 360deg / $total
+
+.ray
+	height: 30px
+
+// 7.) SASS also supports standard 'for' loops
+// Keywords 'through' and 'to' are interchangeable
+@for $i from 1 through $total
+	.ray:nth-child(#{$i})
+		// 2.) The adjust-hue(color, degrees) function takes color and rotates the colourwheel by degrees
+		// The following code steps through the colourwheel to create a rainbow effect
+		background: adjust-hue(blue, $i * $step)
+		// 8.) SASS also supports conditionals if, else-if and else (condition, value-if-true, value-if-false)
+		// When using them in mixins, preface them with @
+		width: if($i % 2 == 0, 300px, 350px)
+		margin-left: if($i % 2 == 0, 0px, 50px)

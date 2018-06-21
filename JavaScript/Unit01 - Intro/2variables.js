@@ -44,4 +44,5 @@ console.log('My favorite animal: ' + favoriteAnimal);
 // template literals in ES6 allow embedded expressions & newlines, contained in grave backticks ``
 console.log(`string text line 1 ${AND...}
 string text line 2`);
-
+// you can join template literal elements without using a plus sign. E.g. to concatenate query params for a query string to submit to an API:
+const endpoint = `${url}${queryParams}${wordQuery}${additionalParams}${topicQuery}`;

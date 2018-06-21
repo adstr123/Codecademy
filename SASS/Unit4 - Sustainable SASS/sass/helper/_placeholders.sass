@@ -1,0 +1,10 @@
+// 6.) Placeholders, defined with % notation, prevent rules from being rendered to CSS on their own and only become active once they are extended anywhere an id or class could be extended
+// See main.sass lines 32 & 38
+%absolute
+	position: absolute
+
+// 7.) Extending is cleaner and more efficient with minimal repetition
+// Only use mixins that take an argument - otherwis eyou can extend
+%center
+	text-align: center
+	vertical-align: middle

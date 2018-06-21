@@ -1,0 +1,6 @@
+$list: ("orange", "purple", "teal")
+
+// 6.) 'Each' loops iterate on each value in a list, assigning $item dynamically to the value of the object in the list according to its position and iteration number of the loop
+@each $item in $list
+  .#{$item}
+    background-color: $item

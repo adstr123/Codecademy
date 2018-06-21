@@ -1,0 +1,99 @@
+$stripe-properties: to bottom, 15%, blue, white
+
+// 2.) Mixins enables groups of CSS declarations for reuse
+// They are used with @include notation
+// 3.) They take in a parametervariableas an argument with the $ notation
+// 4.) Default argument values are provided with ': default' after the argument is defined
+@mixin backface-visibility($visibility: hidden) 
+	backface-visibility: $visibility
+	-webkit-backface-visibility: $visibility
+	-moz-backface-visibility: $visibility
+	-ms-backface-visibility: $visibility
+	-o-backface-visibility: $visibility
+
+@mixin stripes($direction, $width-percent, $stripe-color, $stripe-background: #FFF) 
+	background: repeating-linear-gradient($direction, $stripe-background, $stripe-background ($width-percent - 1), $stripe-color 1%, $stripe-background $width-percent)
+
+@mixin transform($transformation) 
+	transform: $transformation
+	-webkit-transform: $transformation
+	-moz-transform: $transformation
+	-ms-transform: $transformation
+	-o-transform: $transformation  
+
+@mixin photo-content($file)
+	// 7.) Interpolation allows use of variables in selectors or file names with #{}
+	content: url(#{$file}.jpg)
+	object-fit: cover
+
+@mixin transform-style($style) 
+	transform-style: $style
+	-moz-transform-style: $style
+	-o-transform-style: $style
+	-ms-transform-style: $style
+	-webkit-transform-style: $style
+
+@mixin transition($time) 
+	transition: $time
+	-webkit-transition: $time
+	-moz-transition: $time
+	-o-transition: $time
+
+@mixin hover-color($color) 
+	// 8.) & can be used in mixins
+	// & inherits the parentselector at the point where the mixin is included
+	&:hover 
+		color: $color
+	
+.notecard 
+	width: 300px
+	height: 180px
+	border: 1px solid black
+	display: inline-block
+	margin: 20px
+	font-family: Roboto, sans-serif
+	box-shadow: 1px 1px 2px 2px rgba(0,0,0,.2)
+	@include transform-style(preserve-3d)
+	@include transition(0.4s)
+	
+	.front, .back 
+		width: 100%
+		height: 100%
+		position: absolute
+		// 5.) Arguments can be ommitted to use defaults
+		// Only params with non-default value can be passed
+		// Finally, arguments can be passed in any order as long as they are explicitly defined (argument:value)
+		@include backface-visibility
+	
+	.front 
+		z-index: 3
+		font-size: 20px
+
+		.word
+			display: block
+			text-align: center
+			position: relative
+			top: 40%
+			@include hover-color(red)
+
+	.back 
+		z-index: 1
+		word-wrap: break-word
+		line-height: 1.6
+		@include transform(rotatey(-180deg))
+		
+		.definition 
+			width: 100%
+			height: 100%
+			// 6.) Arguments can be passed as a map with the ... notation
+			@include stripes($stripe-properties...)
+						
+			.photo 
+				@include photo-content('titanosaur')
+				width: 60%
+				margin: 0px auto
+
+	// 1.) The & character is used to specify where a parents selector should be inserted for pseudo-elements
+	// It helps reduce the repetition involved in writing pseudo-classes, like with nesting
+	&:hover 
+		@include transform (rotatey(-180deg))
